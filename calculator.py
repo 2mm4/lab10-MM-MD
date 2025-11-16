@@ -3,25 +3,25 @@ import math
 def add(a, b): 
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def div(a, b):
+def divide(a, b):
     if a == 0:
         raise ZeroDivisionError
     else:
         return b / a
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or b <= 0:
         raise ValueError
     else:
         return math.log(a, b)
 
-def exp(a, b):
+def exponent(a, b):
     return a ** b
 
 
