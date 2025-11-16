@@ -1,3 +1,7 @@
+#https://github.com/2mm4/lab10-MM-MD.git
+#Partner 1: Melanie Morgado
+#Partner 2: Matthew Doyle
+
 import unittest
 from calculator import *
 
@@ -15,12 +19,17 @@ class TestCalculator(unittest.TestCase):
     ###########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self):
+        # 3 assertions: standard int mul, 0, negative
+        self.assertEqual(mul(2, 3), 6)
+        self.assertEqual(mul(2, 0), 0)
+        self.assertEqual(mul(2, -1), -2)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_divide(self):
+        # 3 assertions: standard int div, negative, almostequal.
+        self.assertEqual(div(3, 6), 2)
+        self.assertEqual(div(-3, 6), -2)
+        self.assertAlmostEqual(div(2, 1), 0.5)
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
@@ -41,22 +50,24 @@ class TestCalculator(unittest.TestCase):
     ###########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self):
+        # 1 assertion. log>0
+        with self.assertRaises(ValueError):
+            log(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self):
+        # 3 assertions: standard hypot, negative, almostequal
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(-3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(3, 3), math.sqrt(18))
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
+    def test_sqrt(self):
+        # 3 assertions: standard sqrt, not exact, invalid argument hint
+        self.assertEqual(square_root(9), 3)
+        self.assertAlmostEqual(square_root(2), math.sqrt(2))
+        with self.assertRaises(ValueError):
+            square_root(-1)
+
 
 # Do not touch this
 if __name__ == "__main__":

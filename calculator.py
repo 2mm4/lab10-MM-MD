@@ -1,3 +1,7 @@
+#https://github.com/2mm4/lab10-MM-MD.git
+#Partner 1: Melanie Morgado
+#Partner 2: Matthew Doyle
+
 import math
 
 def square_root(a):
