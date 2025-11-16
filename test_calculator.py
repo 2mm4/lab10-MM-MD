@@ -1,6 +1,6 @@
-#https://github.com/2mm4/lab10-MM-MD
-#Partner 1: Melanie Morgado
-#Partner 2: Matthew Doyle
+# https://github.com/2mm4/lab10-MM-MD
+# Partner 1: Melanie Morgado
+# Partner 2: Matthew Doyle
 
 import unittest
 from calculator import *
